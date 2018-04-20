@@ -1,7 +1,7 @@
 # Info & Notes 
 
 Information on this project.
-
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 ### To run the GraphQL-Server (Command Terminal in Root)
 - $ nodemon server.js
