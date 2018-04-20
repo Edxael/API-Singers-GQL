@@ -1,0 +1,14 @@
+{
+    "users": [
+        { "id": "12", "companyId": "1", "firstName": "Haruka Kodoma", "age": 27 },
+        { "id": "22", "companyId": "2", "firstName": "Bora Yoon", "age": 27 },
+        { "id": "34", "companyId": "2", "firstName": "Lisa Manoban", "age": 32 },
+        { "id": "47", "companyId": "2", "firstName": "Rose Park", "age": 29 },
+        { "id": "59", "companyId": "1", "firstName": "Koda Kumi", "age": 36 },
+        { "id": "77", "companyId": "1", "firstName": "Ayumi Hamasaki", "age": 38 }
+    ],
+    "companies":[
+        { "id": "1", "name": "Avex", "description": "Japan" },
+        { "id": "2", "name": "Star-Ship", "description": "S. Korea" }
+    ]
+}
