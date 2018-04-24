@@ -1,6 +1,14 @@
 # Info & Notes 
 This is the master branch
 
+--------------------------------------------------
+
+Other information on GraphQL Queries: https://www.youtube.com/watch?v=bX2e4FILf78
+to see the request "QUERRY" and the PAYLOAD ---> Developert Tools "NETWORK" 
+
+--------------------------------------------------
+
+
 Information on this project.
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
@@ -63,3 +71,6 @@ Home
 }
 
 --------------------------------------------------
+
+
+

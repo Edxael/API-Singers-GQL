@@ -17,4 +17,3 @@ app.use('/graphql', expressGQL({              // <---Allows calls to the dev-env
 app.listen(4000, () => {
     console.log("Server Linstening....");
 })
-
