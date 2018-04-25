@@ -6,7 +6,7 @@ const myUserSchema = require('./schemas/schema1')
 
 
 // ===[ MIDDLEWARE ]====================================================
-app.use('/graphql', expressGQL({              // <---Allows calls to the dev-env-query-tool
+app.use('/pg', expressGQL({              // <---Allows calls to the dev-env-query-tool
     schema: myUserSchema,
     graphiql: true
 }))   
@@ -15,5 +15,5 @@ app.use('/graphql', expressGQL({              // <---Allows calls to the dev-env
 
 // ===[ LISTENER ]======================================================
 app.listen(4000, () => {
-    console.log("Server Linstening....");
+    console.log("Server Linstening....")
 })
