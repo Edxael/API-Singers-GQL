@@ -15,5 +15,6 @@ app.use('/pg', expressGQL({              // <---Allows calls to the dev-env-quer
 
 // ===[ LISTENER ]======================================================
 app.listen(4000, () => {
-    console.log("Server Linstening....")
+    console.log("Server Linstening on Port: 4000...")
 })
+
