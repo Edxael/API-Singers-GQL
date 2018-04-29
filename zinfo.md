@@ -74,3 +74,14 @@ Home
 
 
 Otehr anotations on the database.
+
+
+{
+  company(id: "1"){
+    name
+    description
+    users{
+      firstName
+    }
+  }
+}
