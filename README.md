@@ -1,6 +1,9 @@
-# API = Node.js + Express + GraphQL 
+# API => Node.js + Express + GraphQL + MongoDB
 
-API to provide back-end data.
+Basic API using Mongo & GraphQL.
 
 
-Notes on GraphQL...
+
+
+---------------------------------------
+by: Edmundo Rubio.
