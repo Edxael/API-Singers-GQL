@@ -1,7 +1,9 @@
 // ===[ REQ-DEP ]======================================================
 const graphql = require('graphql')
-const { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLSchema, GraphQLList } = graphql
+const { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLSchema, GraphQLList, GraphQLNonNull } = graphql
 const axios =require('axios')
+
+
 
 
 
@@ -40,6 +42,8 @@ const UserType1 = new GraphQLObjectType({
 
 
 
+
+
 // ===[ RootQuery ]======================================================
 const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
@@ -66,5 +70,54 @@ const RootQuery = new GraphQLObjectType({
 
 
 
+
+// ===[ Mutation ]======================================================
+const mutation = new GraphQLObjectType({
+    name: 'Mutation',
+    fields: {
+        addUser: {
+            type: UserType1,
+            args: {
+                firstName: { type: new GraphQLNonNull(GraphQLString) },
+                age: { type: GraphQLInt },
+                companyId: { type: GraphQLString }
+            },
+            resolve(parentValue, { firstName, age, companyId }){
+                return axios.post('http://localhost:3000/users', { firstName, age, companyId })
+                            .then((resp) => { return resp.data })
+            }
+        },
+        deleteUser: {
+            type: UserType1,
+            args: {
+              id: { type: new GraphQLNonNull(GraphQLString) }
+            },
+            resolve(parentValue, { id }) {
+              return axios.delete(`http://localhost:3000/users/${id}`)
+                          .then(res => res.data);
+            }
+        },
+        updateUser: {
+            type: UserType1,
+            args: {
+              id: { type: new GraphQLNonNull(GraphQLString) },
+              firstName: { type: GraphQLString },
+              age: { type: GraphQLInt },
+              companyId: { type: GraphQLString }
+            },
+            resolve(parentValue, args) {
+              return axios.patch(`http://localhost:3000/users/${args.id}`, args )
+                          .then(res => res.data);
+            }
+        }
+    }
+})
+
+
+
+
+
+
 // ===[ Exporting ]======================================================
-module.exports = new GraphQLSchema({ query: RootQuery })
+module.exports = new GraphQLSchema({ mutation, query: RootQuery })
+

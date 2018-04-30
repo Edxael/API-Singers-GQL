@@ -6,7 +6,7 @@ const myUserSchema = require('./schemas/schema1')
 
 
 // ===[ MIDDLEWARE ]====================================================
-app.use('/pg', expressGQL({              // <---Allows calls to the dev-env-query-tool
+app.use('/graphql', expressGQL({              // <---Allows calls to the dev-env-query-tool
     schema: myUserSchema,
     graphiql: true
 }))   
