@@ -26,4 +26,4 @@ SingerSchema.statics.findLyrics = function(id) {
     .then(song => song.lyrics);
 }
 
-mongoose.model('song', SingerSchema);
+mongoose.model('song', SingerSchema)
