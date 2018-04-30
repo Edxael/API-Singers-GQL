@@ -1,4 +1,4 @@
-# Node.js + Express + GraphQL API + Mongo
+# Node.js + Express + GraphQL API
 
 API to provide back-end data.
 
