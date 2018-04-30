@@ -1,4 +1,4 @@
-# Node.js + Express + GraphQL API
+# API = Node.js + Express + GraphQL 
 
 API to provide back-end data.
 
