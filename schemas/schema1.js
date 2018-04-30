@@ -75,7 +75,7 @@ const RootQuery = new GraphQLObjectType({
 const mutation = new GraphQLObjectType({
     name: 'Mutation',
     fields: {
-        addUser: {
+        addUser: {                        //<-- Add new user.
             type: UserType1,
             args: {
                 firstName: { type: new GraphQLNonNull(GraphQLString) },
@@ -87,7 +87,7 @@ const mutation = new GraphQLObjectType({
                             .then((resp) => { return resp.data })
             }
         },
-        deleteUser: {
+        deleteUser: {                       //<-- Delete User.
             type: UserType1,
             args: {
               id: { type: new GraphQLNonNull(GraphQLString) }
@@ -97,7 +97,7 @@ const mutation = new GraphQLObjectType({
                           .then(res => res.data);
             }
         },
-        updateUser: {
+        updateUser: {                       //<-- Update user. 
             type: UserType1,
             args: {
               id: { type: new GraphQLNonNull(GraphQLString) },
